@@ -1,15 +1,47 @@
-## EKYC ML Web SDK
+![image](https://user-images.githubusercontent.com/81238558/175767662-be4dc9ba-a6bd-459d-aaa3-f8ad0c96aa37.png)
 
-### requirements
+# EkycID SDK for Web
+![](https://img.shields.io/badge/platform-flutter-blue) ![](https://img.shields.io/github/v/tag/EKYCSolutions/ekyc-id-flutter?label=version)
+
+The EkycID Web SDK lets you build a factastic OCR and Face Recognition experienced in your Website.
+
+With one quick scan, your users will be able to extract information from thier identity cards, passports, driver licenses, license plate, vehicle registration, covid-19 vaccinate card, and any other document by government-issued.
+
+
+EkycID is:
+* Easy to integrate into existing ecosystems and solutions through the use of SDKs that supported both native and hybrid applications.
+* Better for user experience being that the document detections and liveness checks are done directly offline on the device.
+* Great for cutting down operations cost and increasing efficiency by decreasing reliance on human labor and time needed for manual data entry. 
+
+
+EkycID can:
+* Extract information from identity documents through document recognition & OCR.
+* Verify whether an individual is real or fake through liveness detection, and face recognition. 
+* Verify the authenticity of the identity documents by combining the power of document detection, OCR, liveness detection, and face recognition.
+
+## 1. Requirements
 
 - `nodejs`
 - `npm` or `pnpm` or `yarn`
+- ekyc proxy server setup, refer [here](https://github.com/EKYCSolutions/node-sdk) for setup instruction for `nodejs`
 
-### Quick Start
+## 2. Installation
 
-1. create a web project `pnpm create vite`, select `svelte` then `typescript`. NOTE: you can use it with any framework other than `svelte`
-2. install the sdk `pnpm add @ekycsolutions/ml-js-sdk`
-3. update `src/App.svelte` to add a div element with id `kyc` or any value as you like to be used to instantiate `Kyc` component
+**Step 1:** Create a web project
+
+for quick start
+
+run `pnpm create vite`, select `svelte` then `typescript`.
+
+NOTE: you can use it with any framework other than `svelte`
+
+**Step 2:** Install the web sdk
+
+install the sdk `pnpm add @ekycsolutions/ml-js-sdk`
+
+**Step 3:** Configure the sdk
+
+update `src/App.svelte` to add a div element with id `kyc` or any value as you like to be used to instantiate `Kyc` component
   ```svelte
   <main>
     <div id="kyc" />
@@ -34,9 +66,6 @@
       // true to use manual kyc flow
       // false to use express ekyc flow
       isLivenessDetectFaceSideOnly: false,
-
-      // true to use liveness config from node server
-      isUseLivenessChecksFromServer: false,
 
       // liveness config from local
       // if `isUseLivenessChecksFromServer` is true
@@ -88,5 +117,18 @@
     kyc.init();
   });
   </script>
-  ```
-4. run `pnpm dev` to test the ekyc with our default overlay as demo
+```
+
+**Step 4:** Run the app
+
+run `pnpm dev` to start the development server
+
+NOTE: we also provided default overlay for you from importing `DocumentScannerDefaultOverlay` and `LivenessDetectionDefaultOverlay`
+
+# 4. Contact
+<p>For any other questions, feel free to contact us at 
+  <a href="https://ekycsolutions.com/">ekycsolutions.com</a>
+</p>
+
+# 5. License
+© 2022 EKYC Solutions Co, Ltd. All rights reserved.
