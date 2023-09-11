@@ -102,11 +102,11 @@ update `src/App.svelte` to add a div element with id `kyc` or any value as you l
       // the types of the argument
       // {
       //  event: Kyc.CallbackEvent;
+      //  runKyc: Function();
       //  data: {
       //    livenessChecks: { checks: string; canvasImageData: Canvas.ImageData; }[];
       //    faceImagesData: { frontSize: Canvas.ImageData; leftSide: Canvas.ImageData; rightSide: Canvas.ImageData; };
       //    documentScanned: { [DocumentSide.Main = 0]: Canvas.ImageData; [DocumentSide.Secondary = 1]: Canvas.ImageData };
-      //    runKyc: Function();
       //   };
       // }
       onKYCCompleted: (e) => {
